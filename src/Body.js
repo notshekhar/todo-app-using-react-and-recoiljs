@@ -4,6 +4,19 @@ import { todoState } from "./states";
 function List({ todo, checked, onChecked, onDelete }) {
   return (
     <div className="list">
+      <input
+        id="option"
+        type="checkbox"
+        name="field"
+        value="option"
+        checked={this.props.todo.checked}
+        onClick={this.props.ontoggle}
+      />
+      <label for="option">
+        <span>
+          <span />
+        </span>
+      </label>
       <input type="checkbox" checked={checked} onChange={onChecked} />
       <span>{todo}</span>
       <button onClick={onDelete}>Delete</button>
