@@ -1,5 +1,6 @@
 * {
   outline: none;
+  transition: all 400ms;
 }
 .header {
   position: fixed;
