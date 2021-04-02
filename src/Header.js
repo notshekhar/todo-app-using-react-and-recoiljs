@@ -14,7 +14,10 @@ export default function Header() {
   const [todo, setTodo] = useRecoilState(todoState);
   function addTodo() {
     let input = prompt("Enter a New ToDo");
-    setTodo([...todo, { checked: false, todo: input, id: v4() }]);
+    let newTodo = { checked: false, todo: input, id: v4() };
+    let newTodos = [...todo, newTodo];
+    setTodo(newTodos);
+    localStorage.setItem("todos", JSON.stringify(newTodos));
   }
   return (
     <div className="header">
